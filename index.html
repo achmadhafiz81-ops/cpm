@@ -25,6 +25,49 @@
         <link href="css/owl.theme.default.min.css" rel="stylesheet">
 
         <link href="css/templatemo-medic-care.css" rel="stylesheet">
+        /* Mengatur tampilan utama dropdown */
+.dropdown {
+  position: relative; /* Diperlukan untuk memposisikan dropdown-content */
+  display: inline-block; /* Agar dropdown tidak memenuhi satu baris */
+}
+
+/* Style untuk tombol pemicu dropdown */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer; /* Menunjukkan elemen dapat diklik */
+}
+
+/* Konten dropdown */
+.dropdown-content {
+  display: none; /* Disembunyikan secara default */
+  position: absolute; /* Agar muncul di atas elemen lain */
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; /* Memastikan menu muncul di atas elemen lain */
+}
+
+/* Tautan di dalam konten dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; /* Agar setiap tautan berada di baris baru */
+}
+
+/* Mengubah warna tautan saat di-hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Menampilkan dropdown saat kursor berada di atas kontainer */
+.dropdown:hover .dropdown-content {
+  display: block; /* Menampilkan dropdown */
+}
 <!--
 
 TemplateMo 566 Medic Care
@@ -171,6 +214,7 @@ https://templatemo.com/tm-566-medic-care
     </body>
 
 </html>
+
 
 
 
