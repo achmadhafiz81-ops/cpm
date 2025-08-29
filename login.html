@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Welcome Back</h2>
+                <p>Sign in to your account</p>
+            
+            
+            <form action="/login" method="post">
+                  <label for="username">Username:</label><br>
+                  <input type="text" id="username" name="username"><br>
+                  <label for="password">Password:</label><br>
+                  <input type="password" id="password" name="password"><br>
+                  <input type="submit" value="Log in">
+            </form>
+			</div>
+		</div>	
+	</div>
+<php?>
+   $servername = "localhost";
+   $username = "username";
+   $password = "password";
+   $dbname = "myDB";
+
+  // Membuat koneksi
+   $conn = new mysqli($servername, $username, $password, $dbname);
+
+  // Memeriksa koneksi
+  if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
+  }
+
+  // Query SQL untuk mengecek data pengguna di database
+  $sql = "SELECT id, username, password FROM Users WHERE username = ? AND password = ?";
+  $stmt = $conn->prepare($sql);
+  $stmt->bind_param("ss", $_POST['username'], $_POST['password']);
+  $stmt->execute();
+  $result = $stmt->get_result();
+
+  if ($result->num_rows > 0) {
+    // Jika pengguna valid, buat sesi dan alihkan ke menu utama
+    session_start();
+    $_SESSION['login'] = TRUE;
+    header("Location: index.html");
+  } else {
+    // Jika pengguna tidak valid, alihkan kembali ke halaman login
+    header("Location: login.html");
+  }
+   $stmt->close();
+   $conn->close();
+</?>
+
+    <script src="../../shared/js/form-utils.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
