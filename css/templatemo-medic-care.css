@@ -196,7 +196,7 @@ strong {
 .animated-info {
   display: inline-block;
   vertical-align: top;
-  min-width: 250px;
+  min-width: 500px;
   position: relative;
 }
 
@@ -913,4 +913,5 @@ strong {
   .timeline::before {
     left: 42px;
   }
+
 }
