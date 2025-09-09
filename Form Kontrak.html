@@ -281,6 +281,9 @@
 			                        <p>Demikian Perjanjian Kerja Elektronik/Digital ini dibuat, Mohon Untuk segera mengirim Surat Kontrak ini ke Pihak Pertama, setelah di tanda tangani oleh pihak kedua. Dan masing – masing berhak untuk menyimpan Shoft file Perusahaan dan Karyawan ini agar mempunyai kekuatan hukum yang sama .</p>
 									</div>
                                     <div class="page" style="text-align:justify">
+										<div style="text-align:left;margin-bottom:12px">
+											<p>Cikarang, <span id="tanggalCikarang"></span></p>
+										</div>
                                     <div>
 									<table class="sign-table">
                                     <tr>
@@ -408,6 +411,13 @@ function isiTanggalHari(){
   document.getElementById("bulan").textContent = bulanList[now.getMonth()];
   document.getElementById("tahun").textContent = now.getFullYear();
 }
+	function isiTanggalCikarang(){
+  const now = new Date();
+  const bulanList = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+  const tanggalStr = `${now.getDate()} ${bulanList[now.getMonth()]} ${now.getFullYear()}`;
+  
+  document.getElementById("tanggalCikarang").textContent = tanggalStr;
+}
   // Simpan counter di localStorage agar berurutan tiap HRD pakai
   function getNextContractNumber(){
   const tahun = new Date().getFullYear();
@@ -534,6 +544,7 @@ function generateNomorKontrak(){
 </script>
 	</body>
 </html>
+
 
 
 
