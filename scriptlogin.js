@@ -6,11 +6,13 @@ document.querySelector("form").addEventListener("submit", function(e) {
 
   // Contoh username & password yang valid
   if (username === "citra" && password === "Citra2025@") {
-  
+  const btn = document.querySelector(".button");
+	btn.classList.add("button--loading");
 	  setTimeout(() => {
 		  window.location.href = "Form Kontrak.html";
 		}, 5000);
 	  } else {
 		alert("Username atau password salah!");
   }
+
 });
