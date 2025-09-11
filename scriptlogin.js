@@ -11,7 +11,7 @@ document.querySelector("form").addEventListener("submit", function(e) {
 	  
 	  setTimeout(() => {
 		  window.location.href = "Form Kontrak.html";
-		}, 5000);
+		}, 2000);
 	  } else {
 		alert("Username atau password salah!");
   }
@@ -23,6 +23,7 @@ document.querySelector("form").addEventListener("submit", function(e) {
   }
 
 });
+
 
 
 
