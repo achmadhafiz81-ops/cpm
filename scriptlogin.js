@@ -14,6 +14,12 @@ document.querySelector("form").addEventListener("submit", function(e) {
 	  } else {
 		alert("Username atau password salah!");
   }
+	window.addEventListener("pageshow", function(event) {
+    const button = document.querySelector(".button");
+    button.classList.remove("button--loading");
+  });
+  }
 
 });
+
 
