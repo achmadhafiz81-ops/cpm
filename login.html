@@ -186,12 +186,15 @@
         <input type="password" id="password" placeholder="Masukkan password" required>
       </div>
 	  </div>
-      <button type="submit">Login</button>
+      <button type="submit" class="button" onclick="this.classList.toggle('button--loading')">
+	  <span class="button__text">Login</span>
+	  </button>
      </form>
   </div>
 	<script src="scriptlogin.js"></script>
 </body>
 </html>
+
 
 
 
