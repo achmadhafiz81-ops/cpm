@@ -5,7 +5,7 @@ document.querySelector("form").addEventListener("submit", function(e) {
   const password = document.getElementById("password").value;
 
   // Contoh username & password yang valid
-  if (username === "Citra" && password === "Citra2025@") {
+  if (username === "admin" && password === "Palembang2025@@") {
   const btn = document.querySelector(".button");
 	btn.classList.add("button--loading");
 	
@@ -21,3 +21,4 @@ document.querySelector("form").addEventListener("submit", function(e) {
   });
   }
 });
+
